@@ -19,7 +19,7 @@ Moreover, there were some values that were anomalous. Some columns contain negat
 
 First, I looked up the demand distribution, the result as below charts shown. 
 
-![Test Image 1](“P1.png”)
+![Alt text](/relative/path/to/img.jpg?raw=true "P1")
 
 
 
