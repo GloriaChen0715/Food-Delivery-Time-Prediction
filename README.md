@@ -19,7 +19,7 @@ Moreover, there were some values that were anomalous. Some columns contain negat
 
 First, I looked up the demand distribution, the result as below charts shown. 
 
-![Screenshot](P1.png)
+![Screenshot](P1.png)![Screenshot](P2.png)
 
 
 
