@@ -49,9 +49,9 @@ I decided to focus on MAE, MAPE, and RMSE as three key error metrics to evaluate
 
 |   create_hr_bin	|out mae|	out mape|	out rmse|	in mae|	in mape|	in rmse|
 |------------|-------------|-------------|-------------|-------------|-------------|-------------|
-|0am-5am|	719.55|	0.26|	1075.64|	418.47|	0.15|	622.60|
-|6am-3pm|	777.91|	0.32|	1099.36|	448.79|	0.19|	662.08|
-|4pm-23pm|	677.18|	0.28|	1074.83|	397.04|	0.17|	606.69|
+|0am-5am|	711.73|	0.26|	1063.95|	399.94|	0.14|	596.44|
+|6am-3pm|	791.70|	0.33|	1100.52|	432.67|	0.18|	631.96|
+|4pm-23pm|	675.20|	0.28|	1073.16|	381.57|	0.16|	584.94|
 
 Most errors are from the demand created from 6pm – 3pm. At this period, the number of available drivers probably is more unstable and inadequate to process the demand, which makes the forecasting more challenging.
 
