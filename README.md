@@ -42,10 +42,10 @@ In this section, I’ve tried several different Machine Learning models such as 
 | Linear Regression In-sample | 847.24	| 0.31	| 1202.59|
 | KNN Out-sample	|888.58|	0.3|1306.17|
 | KNN In-sample	|649.06|	0.2|	1105.73|
-| Random Forest Out-sample|	703.15|	0.27|	1065.78|
-| Random Forest In-sample|	410|	0.16|	616.47|
+| Random Forest Out-sample|	697.54| 0.27| 1057.63|
+| Random Forest In-sample|	393.33|  0.15| 592.82|
 
-I decided to focus on MAE, MAPE, and RMSE as three key error metrics to evaluate the performance of the models. In the final result, the Mean Absolute Error (MAE) is around 703 to 888, suggesting the average of the difference between delivery time estimates and the actual delivery time is around 703 seconds (11.7 mins) to 888 seconds (14.8 mins). The best model is the random forest, which includes the independent variables: market id, store id, created hour, total items, the total on shift dashers, total_busy_dashers, total_outstanding_orders, the number of distinct item, and max/min item price. In the created hour bin, we can easily observe how errors distributed into different time periods. The result as below table shown.
+I decided to focus on MAE, MAPE, and RMSE as three key error metrics to evaluate the performance of the models. In the final result, the Mean Absolute Error (MAE) is around 703 to 888, suggesting the average of the difference between delivery time estimates and the actual delivery time is around 697 seconds (11.6 mins) to 888 seconds (14.8 mins). The best model is the random forest, which includes the independent variables: market id, store id, created hour, total items, the total on shift dashers, total_busy_dashers, total_outstanding_orders, the number of distinct item, and max/min item price. In the created hour bin, we can easily observe how errors distributed into different time periods. The result as below table shown.
 
 |   create_hr_bin	|out mae|	out mape|	out rmse|	in mae|	in mape|	in rmse|
 |------------|-------------|-------------|-------------|-------------|-------------|-------------|
