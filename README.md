@@ -17,6 +17,7 @@ For this project, I’m provided a historical data contains a subset of deliveri
 
 Moreover, there were some values that were anomalous. Some columns contain negative values, which didn’t make sense. I simply make those negative numbers to 0. There are 3 outliers in actual delivery time. They took over 97 hours, so I remove those outliers as well. In addition, I created additional variables such as day of the week of creating time, the hour of creating time, actual delivery time in second to improve model performance. Also, recategorize some of the variables can help to check if a certain group is significant.
 
+## EDA
 First, I looked up the demand distribution, the result as below charts shown. 
 
 ![Screenshot](P1.png)![Screenshot](P2.png)![Screenshot](P3.png)
@@ -31,7 +32,7 @@ There are not vary by the markets. All markets have a similar pattern of deliver
 
 The answer is clearly explained by the chart. The longer delivery time periods are having fewer delivery drivers. The same situation happens to all the markets. These would be an important reference for the following forecasting models. The variables selection will be based on this information for some models.
 
-2.	Models and Results
+## Models and Results
 
 In this section, I’ve tried several different Machine Learning models such as Linear regression, KNN, Neural Network, and Random Forest. I’ll evaluate the performance and compare them. Based on the result I obtained from the EDA session and Linear Regression, there are some variables are significant and meaningful - market id, store id, created time, total items, subtotal, total on shift dashers, total_busy_dashers, total_outstanding_orders, the number of distinct item, and max/min item price will be considered in the models. The result as below table shown.
 
@@ -43,4 +44,12 @@ In this section, I’ve tried several different Machine Learning models such as 
 | KNN In-sample	|649.06|	0.2|	1105.73|
 | Random Forest Out-sample|	703.15|	0.27|	1065.78|
 | Random Forest In-sample|	410|	0.16|	616.47|
+
+I decided to focus on MAE, MAPE, and RMSE as three key error metrics to evaluate the performance of the models. In the final result, the Mean Absolute Error (MAE) is around 703 to 888, suggesting the average of the difference between delivery time estimates and the actual delivery time is around 703 seconds (11.7 mins) to 888 seconds (14.8 mins). The best model is the random forest, which includes the independent variables: market id, store id, created hour, total items, the total on shift dashers, total_busy_dashers, total_outstanding_orders, the number of distinct item, and max/min item price. In the created hour bin, we can easily observe how errors distributed into different time periods. The result as below table shown.
+
+|   create_hr_bin	|out mae|	out mape|	out rmse|	in mae|	in mape|	in rmse|
+|------------|-------------|-------------|-------------|-------------|-------------|-------------|
+|0am-5am|	719.55|	0.26|	1075.64|	418.47|	0.15|	622.60|
+|6am-3pm|	777.91|	0.32|	1099.36|	448.79|	0.19|	662.08|
+|4pm-23pm|	677.18|	0.28|	1074.83|	397.04|	0.17|	606.69|
 
