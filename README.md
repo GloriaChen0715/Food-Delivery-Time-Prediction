@@ -1,4 +1,4 @@
-# Delivery-Time-Prediction
+# Food Delivery Time Prediction
 
 It is very important for food delivery company to get this right, as it has a big impact on consumer experience. Order lateness / underprediction of delivery time is of particular concern as past experiments suggest that underestimating delivery time is roughly twice as costly as overestimating it. Orders that are very early / late are also much worse than those that are only slightly early / late. In this project, I will build a model to predict the estimated time taken for a delivery.
 
@@ -19,7 +19,7 @@ Moreover, there were some values that were anomalous. Some columns contain negat
 
 First, I looked up the demand distribution, the result as below charts shown. 
 
-![Alt text](/relative/path/to/img.jpg?raw=true "P1")
+![Screenshot](P1.png)
 
 
 
