@@ -19,13 +19,29 @@ Moreover, there were some values that were anomalous. Some columns contain negat
 
 First, I looked up the demand distribution, the result as below charts shown. 
 
-![Screenshot](P1.png)![Screenshot](P2.png)
-
-
+![Screenshot](P1.png)![Screenshot](P2.png)![Screenshot](P3.png)
 
 The demands are variety by different markets, day of the week, and created hour. Markets 2 and 4 might be a bigger region which has more demand than other markets. Most of the orders are from the weekend. Demand is getting less from 5 am to 6 pm. The peak time for demand is 2 am. Second, I also examined if the delivery time varies by markets and created time. The result is below shown.
 
-| col 1      | col 2      |
-|------------|-------------|
-| image 1 | image 2 |
+![Screenshot](P4.png)![Screenshot](P5.png)
+
+There are not vary by the markets. All markets have a similar pattern of delivery time. Market 1 and 3 seems to take longer time than other markets. The delivery time is very different at the time of creating the order, which also suggests the importance of the number of available drivers working in that period, so I plotted the average number of drivers working in different created hours. The result is below shown.
+
+![Screenshot](P6.png)
+
+The answer is clearly explained by the chart. The longer delivery time periods are having fewer delivery drivers. The same situation happens to all the markets. These would be an important reference for the following forecasting models. The variables selection will be based on this information for some models.
+
+2.	Models and Results
+
+In this section, I’ve tried several different Machine Learning models such as Linear regression, KNN, Neural Network, and Random Forest. I’ll evaluate the performance and compare them. Based on the result I obtained from the EDA session and Linear Regression, there are some variables are significant and meaningful - market id, store id, created time, total items, subtotal, total on shift dashers, total_busy_dashers, total_outstanding_orders, the number of distinct item, and max/min item price will be considered in the models. The result as below table shown.
+
+|       | MAE   |MAPE    |RMSE    |
+|------------|-------------|-------------|-------------|
+| Linear Regression Out-sample| 851.72|	0.3	| 1247.31     
+| Linear Regression In-sample | 847.24	| 0.31	| 1202.59
+| KNN Out-sample	|888.58|	0.3|1306.17
+| KNN In-sample	|649.06|	0.2|	1105.73
+| Random Forest Out-sample|	703.15|	0.27|	1065.78
+
+| Random Forest In-sample|	410|	0.16|	616.47
 
