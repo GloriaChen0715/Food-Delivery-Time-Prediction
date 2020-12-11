@@ -37,11 +37,10 @@ In this section, I’ve tried several different Machine Learning models such as 
 
 |       | MAE   |MAPE    |RMSE    |
 |------------|-------------|-------------|-------------|
-| Linear Regression Out-sample| 851.72|	0.3	| 1247.31     
-| Linear Regression In-sample | 847.24	| 0.31	| 1202.59
-| KNN Out-sample	|888.58|	0.3|1306.17
-| KNN In-sample	|649.06|	0.2|	1105.73
-| Random Forest Out-sample|	703.15|	0.27|	1065.78
-
-| Random Forest In-sample|	410|	0.16|	616.47
+| Linear Regression Out-sample| 851.72|	0.3	| 1247.31     |
+| Linear Regression In-sample | 847.24	| 0.31	| 1202.59|
+| KNN Out-sample	|888.58|	0.3|1306.17|
+| KNN In-sample	|649.06|	0.2|	1105.73|
+| Random Forest Out-sample|	703.15|	0.27|	1065.78|
+| Random Forest In-sample|	410|	0.16|	616.47|
 
