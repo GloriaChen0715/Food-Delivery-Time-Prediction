@@ -53,3 +53,8 @@ I decided to focus on MAE, MAPE, and RMSE as three key error metrics to evaluate
 |6am-3pm|	777.91|	0.32|	1099.36|	448.79|	0.19|	662.08|
 |4pm-23pm|	677.18|	0.28|	1074.83|	397.04|	0.17|	606.69|
 
+Most errors are from the demand created from 6pm – 3pm. At this period, the number of available drivers probably is more unstable and inadequate to process the demand, which makes the forecasting more challenging.
+
+## Conclusion and Recommendation
+In conclusion, after trying the multiple machine learning models, the random forest model was the most reliable model for this dataset. However, the model still has some flaws that can be improved. In this project, I’m predicting the actual total delivery duration, which means from the time the order created to the time the customer received the order. If I have more information, so I could break down the delivery time process into different stages and predict them separately. Then, add those times together to get the total delivery time, so the performance of forecasting might be improved. For example, there are many factors that affect the pick-up time, such as no parking spot, or difficulty of access to the building. For those potential issues, we can build a separate model to predict only pick-up time. We can do the same thing for driving time and drop-off time as well. Moreover, zip code and address of destination can be also included in the dataset, which shows a clearer and specific location. Last but not least, the weather and temperature will also affect the delivery time sometimes. It would be helpful if that information can be included.
+
